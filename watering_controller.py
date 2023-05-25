@@ -3,7 +3,7 @@ import datetime
 import os
 import logging
 
-import water
+import watering_operations
 
 # Create a blueprint
 watering_blueprint = Blueprint('watering', __name__)
@@ -11,20 +11,20 @@ watering_blueprint = Blueprint('watering', __name__)
 @watering_blueprint.route("/last_watered")
 def get_last_watered_time():
     # Fetch the timestamp of the last watering operation
-    g.last_watered = water.fetch_last_watered_time()
+    g.last_watered = watering_operations.fetch_last_watered_time()
     return render_template('main.html')
 
 @watering_blueprint.route("/sensor")
 def get_soil_status():
     # Check the status of the soil
-    soil_status = water.check_soil_moisture()
+    soil_status = watering_operations.check_soil_moisture()
     g.soil_status_msg = "Water me please!" if soil_status == 1 else "I'm a happy plant"
     return render_template('main.html')
 
 @watering_blueprint.route("/water")
 def trigger_watering():
     # Execute a single watering operation
-    water.activate_pump()
+    watering_operations.activate_pump()
     g.watering_msg = "Watered Once"
     return render_template('main.html')
 
