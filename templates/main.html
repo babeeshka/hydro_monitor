@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-3">
+        <div class="col">
+            <h1>{{ title }}</h1>
+            <h4>Server Time: {{ time }}</h4>
+            <p>Most Recent Status: {{ text }}</p>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col">
+            <a href="/auto/water/ON" class="btn btn-success btn-block">Turn ON Auto Watering</a>
+            <a href="/auto/water/OFF" class="btn btn-danger btn-block mt-3">Turn OFF Auto Watering</a>
+            <a href="/sensor" class="btn btn-info btn-block mt-3">Check Soil Status</a> <br>
+            <a href="/water" class="btn btn-primary btn-block mt-3">Water Once</a>
+            <a href="/last_watered" class="btn btn-warning btn-block mt-3">Check Time Last Watered</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
