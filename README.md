@@ -51,7 +51,7 @@ To have the system automatically water the plant, set up a cron job to execute t
 
 ```bash
 */20 * * * * /usr/bin/python3 /home/pi/<your-repo-name>/auto_watering_script.py >> /home/pi/<your-repo-name>/cronjob.log 2>&1
+```
 
 ## Caution
 Please ensure that all wiring connections are solid and correct. Miswiring can cause damage to the Raspberry Pi or other components. Be very careful when dealing with water around electronics. Always double-check your setup and proceed with caution.
-
