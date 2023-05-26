@@ -1,4 +1,4 @@
-# Raspberry Pi Water Pump Monitor and Controller
+# Raspberry Pi Water Pump Monitor and Controller (hydro_monitor)
 This project involves creating a Flask web application to monitor and control a water pump connected to a Raspberry Pi. The application provides a web interface where the user can check the pump's status, manually control the pump, and schedule automatic watering.
 
 ## Prerequisites
